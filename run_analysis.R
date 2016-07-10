@@ -25,14 +25,14 @@ run_analysis <- function() {
         
         ## download the zip file to the data folder, if it doesn't alredy exist
         ## since we are downloading from a network source, this step can take some time\
-        if (!file.exists('./data/Dataset.zip')) {
-                download.file(fileURL, destfile = "./data/Dataset.zip")
+        if (!file.exists('./Dataset.zip')) {
+                download.file(fileURL, destfile = "./Dataset.zip")
         }
         
         ## unzip the dataset to our data folder
         ## this will create a new folder called "UCI HAR Dataset".
         ## it will also overwrite any already extracted data.
-        unzip('./data/Dataset.zip', exdir = './data', overwrite = TRUE)
+        unzip('./Dataset.zip', exdir = './data', overwrite = TRUE)
         
         ## load the required datasets
         activity_labels <- read.table('./data/UCI HAR Dataset/activity_labels.txt')
