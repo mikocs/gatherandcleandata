@@ -115,6 +115,6 @@ run_analysis <- function() {
         
         ## save data table to the data folder. Before saving we are coercing it back
         ## to data.frame format
-        write.table(as.data.frame(tidy_data), file = './tidy_data.txt')
+        write.table(as.data.frame(tidy_data), file = './tidy_data.txt', row.name = FALSE)
 
 }
